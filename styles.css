@@ -1,0 +1,140 @@
+:root{
+    --primary: #2A6041;
+    --secondary: #28965A;
+    --bright-accent: #2CEAA3;
+    --brightest-accent: #7cfef0;
+    --white-main: #f5f5f5;
+    --black-main: #0c0c0c;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--white-main);
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1200px 1fr;
+}
+
+.header-content{
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.nav-item{
+    padding: 20px 0px;
+}
+
+.nav-container{
+    display: flex;
+    gap: 10px;
+}
+
+.active{
+    font-weight: bold;
+    border-bottom: 3px solid var(--secondary);
+    color: var(--secondary)
+}
+
+/* Blog section */
+
+.blog-section{
+    min-height: 100vh;
+}
+
+.blog-title{
+    grid-column: 2;
+    background-color: var(--primary);
+    width: 100%;
+    padding: 20px;
+    color: white;
+}
+
+
+.blog-title h1{
+    grid-column: 2;
+}
+
+/* Filters */
+.blog-filters{
+    background-color: var(--secondary);
+    padding: 10px;
+}
+
+.filters{
+    grid-column: 2;
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-item{
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #258a51;
+    font-size: 1.2rem;
+}
+
+.filter-item:hover{
+    cursor: pointer;
+    background-color: #207545;
+}
+
+.active-filters{
+    height: 40px;
+    background-color: red;
+}
+
+.active-filter-container{
+    background-color: gray;
+    padding: 5px 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Cards */
+
+
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary);
+    height: 100px;
+    color: white;
+    font-weight: 600;
+}
