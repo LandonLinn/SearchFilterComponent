@@ -111,16 +111,40 @@ header{
     background-color: #207545;
 }
 
-.active-filters{
+.active-filters-container{
     height: 40px;
-    background-color: red;
 }
 
-.active-filter-container{
+.active-filters{
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-container{
     background-color: gray;
-    padding: 5px 10px;
-    width: fit-content;
-    height: fit-content;
+    height: 100x;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 5px 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-close-btn{
+    height: 100%;
+    width: 100%;
+    padding: 1px 5px;
+    border-radius: 50%;
+    background-color: rgb(84, 84, 84);
+}
+
+.filter-close-btn:hover{
+    cursor: pointer;
+    background-color: rgb(64, 64, 64);
 }
 
 /* Cards */

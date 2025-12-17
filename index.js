@@ -39,15 +39,27 @@ for(let filter of filters){
         activeFilters.forEach(activeFilter => {
             // Set Elements
             let activeFilterBG = document.createElement('div');
-            activeFilterBG.className = "active-filter-container";
+            activeFilterBG.className = "filter-container";
 
+            // Filter Text
             let activeFilterElem = document.createElement('p');
-            activeFilterElem.classList = "active-filter-text";
             activeFilterElem.textContent = activeFilter;
+
+            // Filter Delete
+            let activeFilterClose = document.createElement('div')
+            activeFilterClose.className = "filter-close-btn";
+            activeFilterClose.addEventListener("click", () => {
+                activeFilters.delete(activeFilter);
+            });
+            let x = document.createElement('p');
+            activeFilterClose.appendChild(x);
+            x.textContent = "x";
+
 
             // Appending
             activeFilterBG.appendChild(activeFilterElem);
-            activeFilterContainer.appendChild(activeFilterElem);
+            activeFilterBG.appendChild(activeFilterClose);
+            activeFilterContainer.appendChild(activeFilterBG);
         });
         
     });
